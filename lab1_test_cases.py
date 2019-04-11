@@ -185,7 +185,33 @@ class TestLab1(unittest.TestCase):
         target = 6
         self.assertEqual(bin_search(target,low,high,list_val),None)
 
+    def test_bin_search_14(self):
+        list_val=[1,2,3,4,5,6,7,8,9]
+        low = 6
+        high = 14
+        target = 6
+        self.assertEqual(bin_search(target,low,high,list_val),None)
 
+    def test_bin_search_15(self):
+        list_val=[1,2,3,4,5,6,7,8,9]
+        low = 13
+        high = 20
+        target = 6
+        self.assertEqual(bin_search(target,low,high,list_val),None)
+
+    def test_bin_search_16(self):
+        list_val=[1,2,3,4,5,6,7,8,9]
+        low = -3
+        high = 5
+        target = 6
+        self.assertEqual(bin_search(target,low,high,list_val),None)
+
+    def test_bin_search_17(self):
+        list_val=[1,2,3,4,5,6,7,8,9]
+        low = 5
+        high = 20
+        target = 6
+        self.assertEqual(bin_search(target,low,high,list_val),None)
 
 if __name__ == "__main__":
         unittest.main()

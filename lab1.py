@@ -37,9 +37,7 @@ def bin_search(target, low, high, int_list):
     if low < 0:
         return None
     if high > len(int_list)-1:
-        high = len(int_list) - 1
-    if high > len(int_list) - 1:
-        high = len(int_list) - 1
+        return None
     span = high-low
     if span == 1:
         if target == int_list[low]:
