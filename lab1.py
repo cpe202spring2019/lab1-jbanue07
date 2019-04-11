@@ -3,7 +3,7 @@ def max_list_iter(int_list):
    max = 0
    if int_list is None:
        raise ValueError
-   elif int_list == []:
+   elif not int_list:
        return None
    for i in range(len(int_list)):
       if int_list[i] > max:
@@ -26,6 +26,8 @@ def reverse_rec(int_list):
 
 
 def bin_search(target, low, high, int_list):
+    if int_list == None:
+        raise ValueError
     span = high-low
     if span == 1:
         if target == int_list[low]:
@@ -34,8 +36,6 @@ def bin_search(target, low, high, int_list):
             return high
         else:
             return None
-    elif int_list == None:
-        raise ValueError
     if span%2 == 0:
         mid = int(span/2 + low)
     elif span%2 == 1:
@@ -43,7 +43,7 @@ def bin_search(target, low, high, int_list):
     if target == int_list[mid]:
         return mid
     elif target < int_list[mid]:
-        mid = mid -1
+        mid = mid - 1
         return bin_search(target, low, mid, int_list)
     elif target > int_list[mid]:
         mid = mid + 1
